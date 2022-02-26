@@ -1,1 +1,1 @@
-web: python3 URL_Shotener.py
+web: python3 URL_Shortener.py
