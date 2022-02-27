@@ -1,1 +1,1 @@
-web: python3 URL_Shortener.py
+worker: python3 URL_Shortener.py
