@@ -79,7 +79,7 @@ def main():
     updater.dispatcher.add_handler(CommandHandler('start', start))
     updater.dispatcher.add_handler(MessageHandler(Filters.all & ~Filters.command, TextHandler))
     updater.start_polling()
-    updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN, webhook_url=APP_NAME + TOKEN)
+    updater.start_webhook(listen="127.0.0.1", port=PORT, url_path=TOKEN, webhook_url=APP_NAME + TOKEN)
 
 
 if __name__ == '__main__':
