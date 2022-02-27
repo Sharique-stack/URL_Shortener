@@ -71,14 +71,13 @@ def TextHandler(update: Update, context: CallbackContext) -> None:
         update.message.reply_text(text='Sorry I could not process this URL!', quote=True)
 
 
-@run_async
 def main():
     TOKEN = "5119135849:AAGkTLY6_V-UeMhfEQKwF0A0DnP-IespCAw"
     APP_NAME = 'https://urlshortenerbot1.herokuapp.com/'
 
     updater = Updater(TOKEN, use_context=True)
     updater.dispatcher.add_handler(CommandHandler('start', start))
-    updater.dispatcher.add_handler(MessageHandler(Filters.all & ~Filters.command, TextHandler, run_async=True))
+    updater.dispatcher.add_handler(MessageHandler(Filters.all & ~Filters.command, TextHandler))
     updater.start_polling()
     updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN, webhook_url=APP_NAME + TOKEN)
 
