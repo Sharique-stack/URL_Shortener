@@ -1,1 +1,1 @@
-web: python3 URL_Shortener.py --log-file -
+web: gunicorn URL_Shortener.py --log-file -
