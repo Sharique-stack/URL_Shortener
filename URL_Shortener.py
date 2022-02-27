@@ -71,7 +71,7 @@ def TextHandler(update: Update, context: CallbackContext) -> None:
         update.message.reply_text(text='Sorry I could not process this URL!', quote=True)
 
 
-
+@run_async
 def main():
     TOKEN = "5119135849:AAGkTLY6_V-UeMhfEQKwF0A0DnP-IespCAw"
     APP_NAME = 'https://urlshortenerbot1.herokuapp.com/'
