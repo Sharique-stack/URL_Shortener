@@ -1,1 +1,1 @@
-worker: python URL_Shortener.py --log-file -
+web: python URL_Shortener.py --log-file -
