@@ -1,7 +1,6 @@
 import requests
 from telegram import *
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext, \
-    MessageHandler, Filters, PreCheckoutQueryHandler, ShippingQueryHandler
+from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext, MessageHandler, Filters, PreCheckoutQueryHandler, ShippingQueryHandler
 import telegram
 import logging
 
