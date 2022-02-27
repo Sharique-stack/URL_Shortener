@@ -1,1 +1,1 @@
-web: python3 URL_Shortener.py -p $PORT
+worker: python URL_Shortener.py --log-file -
