@@ -5,7 +5,7 @@ import telegram
 import logging
 
 import os
-PORT = int(os.environ.get('PORT', 3000))
+PORT = int(os.environ.get('PORT', 8443))
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
 )
@@ -78,7 +78,6 @@ def main():
     updater = Updater(TOKEN, use_context=True)
     updater.dispatcher.add_handler(CommandHandler('start', start))
     updater.dispatcher.add_handler(MessageHandler(Filters.all & ~Filters.command, TextHandler))
-    updater.start_polling()
     updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN, webhook_url=APP_NAME + TOKEN)
 
 
